@@ -69,8 +69,12 @@ def booking(request, username, day, month, year, ha_id):
             b.hour_avaliable = ha
             b.save()
             send_mail(_('Booking done [%s]' % ha.hour.ctime()),
-                      _('Booking done by %s (%s) for %s\n\nComment:\n%s' %\
-                        (b.user_name, b.email, ha.hour.ctime(), b.comment)),
+                      _('Booking done by %(user)s (%(email)s) '
+                        'for %(time)s\n\nComment:\n%(comment)s' %\
+                        {'user': b.user_name,
+                         'email': b.email,
+                         'time': ha.hour.ctime(),
+                         'comment': b.comment}),
                       settings.DEFAULT_FROM_EMAIL,
                       [ha.user.email, b.email], fail_silently=True)
             return redirect("rtut.views.cal", username)
