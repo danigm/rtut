@@ -1,0 +1,30 @@
+{% load url from future %}
+{% load i18n %}
+<html>
+<head>
+<title>RTUT</title>
+
+<link href="/media/css/style.css" rel="stylesheet" type="text/css" media="screen"/>
+</head>
+
+<body>
+<ul id="menu">
+    <li><a href="{% url 'rtut.views.all' %}">{% trans "All users" %}</a></li> |
+    {% if user.is_authenticated %}
+        <li><a href="{% url 'rtut.views.cal' user.username %}">{% trans "My cal" %}</a></li> |
+        <li><a href="{% url 'rtut.views.defcal' %}">{% trans "Define hours" %}</a></li> |
+        <li><a href="{% url 'django.contrib.auth.views.logout' %}">{% trans "Logout" %}</a></li>
+    {% else %}
+        <li><a href="{% url 'django.contrib.auth.views.login' %}">{% trans "Login" %}</a></li>
+    {% endif %}
+</ul>
+
+<div id="main">
+{% block content %}
+{% endblock %}
+</div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "calendar" %} - {{ username }}</h1>
+<table id="calendar">
+    <tr>
+        <th>{% trans "monday" %}</th>
+        <th>{% trans "tuesday" %}</th>
+        <th>{% trans "wednesday" %}</th>
+        <th>{% trans "thursday" %}</th>
+        <th>{% trans "friday" %}</th>
+        <th>{% trans "saturday" %}</th>
+        <th>{% trans "sunday" %}</th>
+    </tr>
+{% for week in days %}
+    <tr>
+    {% for day, query, n, m in week %}
+        <td class="month{{day.month}} {% if n > m %}green{% else %}red{% endif %}">
+            {# <a href="{% url rtut.views.day username day.day day.month day.year %}">{{ day.day }}</a> #}
+            {{ day.day }}
+            <ul>
+            {% for i in query %}
+                {% if not i.booking_set.count %}
+                    <a href="{% url rtut.views.booking username day.day day.month day.year i.id %}">
+                    <li>{{ i.hour|time:"H:i" }}</li>
+                    </a>
+                {% else %}
+                    <li class="booked" alt="{% if user.username == username %} {{ i.booker }} {% endif %}"
+                                       title="{% if user.username == username %} {{ i.booker }} {% endif %}">
+                                       {{ i.hour|time:"H:i" }}
+                    </li>
+                {% endif %}
+            {% endfor %}
+            </ul>
+        </td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

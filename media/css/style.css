@@ -1,0 +1,100 @@
+#main {
+    width: 900px;
+    margin: 5em auto 5em auto;
+    border: 1px solid gray;
+    padding: 10px;
+    -webkit-border-radius: 10px;
+    -mozilla-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-box-shadow: 2px 2px 2px gray;
+    -mozilla-box-shadow: 2px 2px 2px gray;
+    box-shadow: 2px 2px 2px gray;
+
+    background: white;
+}
+
+body {
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.46, rgb(255,255,255)),
+        color-stop(0.73, rgb(210,210,210))
+    );
+    background-image: -moz-linear-gradient(
+        linear,
+        left top,
+        rgb(255,255,255) 46%,
+        rgb(210,210,210) 73%
+    );
+}
+
+#calendar {
+    width: 100%;
+}
+
+#calendar td {
+    height: 100px;
+    text-align: center;
+}
+
+#calendar td {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.green {
+    background: #99ff99;
+}
+
+.red {
+    background: #ff9999;
+}
+
+.month1, .month3, .month5, .month7, .month9, .month11 {
+    border: 2px solid gray;
+}
+
+.month2, .month4, .month6, .month8, .month10, .month12 {
+    border: 2px solid black;
+}
+
+.booked {
+    color: white;
+    background-color: red;
+    border: 1px solid #ff9999;
+}
+
+li.booked:hover {
+    background-color: red;
+}
+
+ul {
+    padding: 0px;
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+    color: white;
+    background-color: green;
+    padding: 2px;
+}
+
+li:hover {
+    background-color: black;
+}
+
+ul a {
+    text-decoration: none;
+}
+
+#allusers li {
+    background: none;
+}
+
+#menu li {
+    background: none;
+    display: inline;
+}

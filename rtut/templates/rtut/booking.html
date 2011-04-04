@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{% trans "day" %} {{ day.day }}/{{ day.month }}/{{ day.year }} - {{ day.hour }}:{{ day.minute }}</h1>
+
+    {% if booked %}
+    <div class="errors">{% trans "That hour is booked" %}</div>
+    {% endif %}
+
+    <form method="POST" action="">
+    {% csrf_token %}
+    <table>
+        <tr style="display: none;"><td><input type="text" name="subject"/></td></tr>
+        {{ form.as_table }}
+    </table>
+    <input type="submit" value="{% trans "send" %}"/>
+    </form>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "day" %} {{ day.day }}/{{ day.month }}/{{ day.year }}</h1>
+
+<table>
+    {% for i in hour_avaliable %}
+        <tr>
+            <td><a href="{% url rtut.views.booking user.username day.day day.month day.year i.id %}">{{ i.hour.ctime }}</a></td>
+            <td>{{ i.time }}</td>
+            <td>{% for j in i.booking_set.all %}{{ j.user_name }}{% endfor %}</td>
+        <tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
