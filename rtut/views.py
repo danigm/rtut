@@ -38,7 +38,8 @@ def cal(request, username):
                                                 'user': request.user,
                                                 'username': username,
                                                 'show_booker': settings.SHOW_BOOKER,
-                                                'days': days})
+                                                'days': days},
+                              context_instance=RequestContext(request))
 
 
 def day(request, username, day, month, year):
@@ -49,7 +50,11 @@ def day(request, username, day, month, year):
     return render_to_response("rtut/day.html", {'user': user,
                                                 'hour_avaliable': hour_avaliable,
                                                 'booking': booking,
-                                                'day': datetime.datetime(int(year), int(month), int(day))})
+                                                'day':
+                                                datetime.datetime(int(year),
+                                                int(month),
+                                                int(day))},
+                              context_instance=RequestContext(request))
 
 
 class BookingForm(ModelForm):
