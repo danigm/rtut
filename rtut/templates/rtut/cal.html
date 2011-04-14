@@ -29,6 +29,9 @@
                     <li class="booked" alt="{% if user.username == username %} {{ i.booker }} {% endif %}"
                                        title="{% if user.username == username %} {{ i.booker }} {% endif %}">
                                        {{ i.hour|time:"H:i" }}
+                                       {% if user.username == username and show_booker %}
+                                        {{ i.minibooker|safe }}
+                                       {% endif %}
                     </li>
                 {% endif %}
             {% endfor %}

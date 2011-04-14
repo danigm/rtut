@@ -37,6 +37,7 @@ def cal(request, username):
     return render_to_response('rtut/cal.html', {'today': today,
                                                 'user': request.user,
                                                 'username': username,
+                                                'show_booker': settings.SHOW_BOOKER,
                                                 'days': days})
 
 

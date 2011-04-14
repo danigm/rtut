@@ -14,6 +14,13 @@ class HourAvaliable(models.Model):
         else:
             return ''
 
+    def minibooker(self):
+        if self.booking_set.count():
+            b = self.booking_set.all()[0]
+            return '<div class="minibooker">%s</div>' % b.user_name
+        else:
+            return ''
+
     class Meta:
         ordering = ['hour']
 
