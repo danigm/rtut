@@ -102,7 +102,7 @@ msgstr "Mi calendario"
 
 #: rtut/templates/base.html:15
 msgid "Define hours"
-msgstr "Definir horaas"
+msgstr "Definir horas"
 
 #: rtut/templates/base.html:16
 msgid "Logout"
