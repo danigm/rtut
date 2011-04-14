@@ -111,3 +111,5 @@ INSTALLED_APPS = (
 
 LOGIN_REDIRECT_URL = '/'
 LOGIN_URL = '/accounts/login/'
+
+TIME_SLICE = 0.5

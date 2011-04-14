@@ -157,9 +157,9 @@ def defcal(request):
                 h = hour1
                 while h < hour2:
                     rd = datetime.datetime(d.year, d.month, d.day, h.hour, h.minute)
-                    ha = HourAvaliable(user=user, hour=rd, time=1)
+                    ha = HourAvaliable(user=user, hour=rd, time=settings.TIME_SLICE)
                     ha.save()
-                    h = h + datetime.timedelta(1 / 24.)
+                    h = h + datetime.timedelta((1 / 24.) * settings.TIME_SLICE)
                 d = d + datetime.timedelta(1)
 
             return redirect(cal, user.username)
