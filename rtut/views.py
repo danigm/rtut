@@ -28,7 +28,7 @@ def cal(request, username):
         week = []
         for j in range(7):
             day = today + datetime.timedelta(7*i + j)
-            query = user.houravaliable_set.filter(hour__day=day.day, hour__month=day.month)
+            query = user.houravaliable_set.filter(hour__day=day.day, hour__month=day.month, hour__year=day.year)
             n = query.count()
             m = Booking.objects.filter(hour_avaliable__in=query).count()
             week.append((day, query, n, m))
@@ -44,7 +44,7 @@ def cal(request, username):
 
 def day(request, username, day, month, year):
     user = get_object_or_404(User, username=username)
-    hour_avaliable = user.houravaliable_set.filter(hour__day=day, hour__month=month)
+    hour_avaliable = user.houravaliable_set.filter(hour__day=day, hour__month=month, hour__year=year)
     booking = Booking.objects.filter(hour_avaliable__in=hour_avaliable)
 
     return render_to_response("rtut/day.html", {'user': user,
