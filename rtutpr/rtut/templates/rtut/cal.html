@@ -17,12 +17,12 @@
     <tr>
     {% for day, query, n, m in week %}
         <td class="month{{day.month}} {% if n > m %}green{% else %}red{% endif %}">
-            {# <a href="{% url rtut.views.day username day.day day.month day.year %}">{{ day.day }}</a> #}
+            {# <a href="{% url 'rtut.views.day' username day.day day.month day.year %}">{{ day.day }}</a> #}
             {{ day.day }}
             <ul>
             {% for i in query %}
                 {% if not i.booking_set.count %}
-                    <a href="{% url rtut.views.booking username day.day day.month day.year i.id %}">
+                    <a href="{% url 'rtut.views.booking' username day.day day.month day.year i.id %}">
                     <li>{{ i.hour|time:"H:i" }}</li>
                     </a>
                 {% else %}

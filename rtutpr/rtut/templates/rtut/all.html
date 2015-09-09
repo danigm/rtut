@@ -3,7 +3,7 @@
 {% block content %}
 <ul id="allusers">
     {% for i in allusers %}
-        <li><a href="{% url rtut.views.cal i.username %}">{{ i.username }}</a></li>
+        <li><a href="{% url 'rtut.views.cal' i.username %}">{{ i.username }}</a></li>
     {% endfor %}
 </ul>
 {% endblock %}
