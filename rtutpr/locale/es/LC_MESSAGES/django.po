@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-04 19:58+0200\n"
+"POT-Creation-Date: 2015-09-09 20:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,80 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
-
-#: rtut/views.py:71
-#, python-format
-msgid "Booking done [%s]"
-msgstr "Reserva hecha [%s]"
-
-#: rtut/views.py:72
-#, python-format
-msgid ""
-"Booking done by %(user)s (%(email)s) for %(time)s\n"
-"\n"
-"Comment:\n"
-"%(comment)s"
-msgstr ""
-"Reserva hecha por %(user)s (%(email)s) para %(time)s\n"
-"\n"
-"Comentario:\n"
-"%(comment)s"
-
-#: rtut/views.py:94
-msgid "Dates"
-msgstr "Fechas"
-
-#: rtut/views.py:96
-msgid "format: 'dd/mm/yy-dd/mm/yy'"
-msgstr "formato: 'dd/mm/yy-dd/mm/yy'"
-
-#: rtut/views.py:97
-msgid "Hours"
-msgstr "Horas"
-
-#: rtut/views.py:99
-msgid "format: 'hh:mm-hh:mm'"
-msgstr "formato: 'hh:mm-hh:mm'"
-
-#: rtut/views.py:100
-msgid "all"
-msgstr "todos"
-
-#: rtut/views.py:101
-msgid "mon"
-msgstr "lun"
-
-#: rtut/views.py:102
-msgid "tue"
-msgstr "mar"
-
-#: rtut/views.py:103
-msgid "wed"
-msgstr "mie"
-
-#: rtut/views.py:104
-msgid "thu"
-msgstr "jue"
-
-#: rtut/views.py:105
-msgid "fri"
-msgstr "vie"
-
-#: rtut/views.py:106
-msgid "sat"
-msgstr "sab"
-
-#: rtut/views.py:107
-msgid "sun"
-msgstr "dom"
-
-#: rtut/views.py:118
-msgid "Wrong format, use 'dd/mm/yy-dd/mm/yy'"
-msgstr "Formato incorrecto, usa 'dd/mm/yy-dd/mm/yy'"
-
-#: rtut/views.py:131
-msgid "Wrong format, use 'hh:mm-hh:mm'"
-msgstr "Formato incorrecto, usa 'hh:mm-hh:mm'"
 
 #: rtut/templates/base.html:12
 msgid "All users"
@@ -163,3 +89,77 @@ msgstr "Definir"
 #: rtut/templates/rtut/login.html:8
 msgid "Your username and password didn't match. Please try again."
 msgstr "Tu nombre de usuario o contraseña con coinciden, Inténtalo de nuevo"
+
+#: rtut/views.py:77
+#, python-format
+msgid "Booking done [%s]"
+msgstr "Reserva hecha [%s]"
+
+#: rtut/views.py:78
+#, python-format
+msgid ""
+"Booking done by %(user)s (%(email)s) for %(time)s\n"
+"\n"
+"Comment:\n"
+"%(comment)s"
+msgstr ""
+"Reserva hecha por %(user)s (%(email)s) para %(time)s\n"
+"\n"
+"Comentario:\n"
+"%(comment)s"
+
+#: rtut/views.py:100
+msgid "Dates"
+msgstr "Fechas"
+
+#: rtut/views.py:102
+msgid "format: 'dd/mm/yy-dd/mm/yy'"
+msgstr "formato: 'dd/mm/yy-dd/mm/yy'"
+
+#: rtut/views.py:103
+msgid "Hours"
+msgstr "Horas"
+
+#: rtut/views.py:105
+msgid "format: 'hh:mm-hh:mm'"
+msgstr "formato: 'hh:mm-hh:mm'"
+
+#: rtut/views.py:106
+msgid "all"
+msgstr "todos"
+
+#: rtut/views.py:107
+msgid "mon"
+msgstr "lun"
+
+#: rtut/views.py:108
+msgid "tue"
+msgstr "mar"
+
+#: rtut/views.py:109
+msgid "wed"
+msgstr "mie"
+
+#: rtut/views.py:110
+msgid "thu"
+msgstr "jue"
+
+#: rtut/views.py:111
+msgid "fri"
+msgstr "vie"
+
+#: rtut/views.py:112
+msgid "sat"
+msgstr "sab"
+
+#: rtut/views.py:113
+msgid "sun"
+msgstr "dom"
+
+#: rtut/views.py:124
+msgid "Wrong format, use 'dd/mm/yy-dd/mm/yy'"
+msgstr "Formato incorrecto, usa 'dd/mm/yy-dd/mm/yy'"
+
+#: rtut/views.py:137
+msgid "Wrong format, use 'hh:mm-hh:mm'"
+msgstr "Formato incorrecto, usa 'hh:mm-hh:mm'"
