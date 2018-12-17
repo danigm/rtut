@@ -119,3 +119,7 @@ TIME_SLICE = 0.5
 SHOW_BOOKER = True
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+import django_heroku
+django_heroku.settings(locals())
